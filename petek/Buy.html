@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/paypal-button.min.js"></script>
+    <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=jonathangibar@gmail.com"
+            data-button="buynow"
+            data-name="Wish note"
+            data-quantity="1"
+            data-amount="4.99"
+            data-shipping="0"
+            data-tax="0"
+            data-callback="gan-yavnet.co.il"
+            > </script>
+</head>
+<body>
+<form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_top" style="opacity: 1;">
+    <div class="hide" id="errorBox"></div><input type="hidden" name="button" value="buynow">
+    <input type="hidden" name="business" value="jonathangibar@gmail.com">
+    <input type="hidden" name="item_name" value="Wish note">
+    <input type="hidden" name="quantity" value="1">
+    <input type="hidden" name="amount" value="4.99">
+    <input type="hidden" name="currency_code" value="">
+    <input type="hidden" name="shipping" value="0">
+    <input type="hidden" name="tax" value="0">
+    <input type="hidden" name="notify_url" value="gan-yavnet.co.il">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="bn" value="JavaScriptButton_buynow">
+    <input type="hidden" name="env" value="www">
+    <button type="submit" class="paypal-button large">Buy Now</button>
+</form>
+</body>
+</html>
