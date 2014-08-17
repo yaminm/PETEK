@@ -32,7 +32,7 @@
             margin: 20px 5px;
             outline:solid 3px silver;
             background-color:gray ;
-            background-image: ;
+          //  background-image: ;
         }
         .forme:focus{
             outline:solid 5px red;
@@ -54,6 +54,13 @@
     <script>
         function PopupCenter(pageURL, title,w,h) {
 
+            var name=document.getElementById("fullname").value;
+            var Emailadd=document.getElementById("Emailadd").value  ;
+            var note=document.getElementById("note").value  ;
+            localStorage.setItem("name", name);
+            localStorage.setItem("Emailadd", Emailadd);
+            localStorage.setItem("note", note);
+
 
 
             send();
@@ -64,9 +71,7 @@
 
 
         function send() {
-            var name=document.getElementById("fullname").value;
-            var Emailadd=document.getElementById("Emailadd").value  ;
-            var note=document.getElementById("note").value  ;
+
 
             var link = 'mailto:yamin.menash@gmail.com?subject=Message from '
                     +"\nFillName:"+name+"\nEmail:"
@@ -186,14 +191,15 @@
                                 <div class="toggle-content text-center" id="tab4">
                                     <h3>Write your note</h3>
 
-                                    <form>
-                                       Full name: <textarea  rows="1" name="firstname" class="forme" id="fullname"></textarea>
-                                       Email: <textarea  rows="1" name="lastname" class="forme" id="Emailadd" ></textarea>
-                                       Your Wish : <textarea  rows="4"   name="firstname" class="forme" id="note"></textarea><br>
-                                     <button onclick="PopupCenter('Buy.html','buy',200,200)">Click!</button>
-                                        <button onclick="send()">SEMD MAIL</button>
 
-                                    </form>
+                                       Full name:<br> <textarea cols="50"  rows="1" name="firstname" class="forme" required id="fullname"></textarea>
+                                    <br> Email:<br> <textarea cols="50"  rows="1" name="lastname" class="forme" required id="Emailadd" ></textarea>
+                                    <br>   Your Wish :<br> <textarea cols="50"  rows="4"   name="firstname" required class="forme"  id="note" style="background-image: url('images/old-paper.jpg')" >Dear g-d..</textarea><br>
+
+                                     <button onclick="PopupCenter('Buy.html','_parent',200,200)">Click!</button>
+
+
+
                                        </div>
 
                                 <div class="toggle-content text-center" id="tab5">

@@ -10,10 +10,32 @@
             data-amount="4.99"
             data-shipping="0"
             data-tax="0"
-            data-callback="gan-yavnet.co.il"
-            > </script>
+            data-callback="success.html"
+
+
+            >      </script>
+    /*  data-callback when succesd to buy*/
+
+    <script>
+
+
+        var name=localStorage.getItem("name");
+        var Emailadd=localStorage.getItem("Emailadd");
+        var note=localStorage.getItem("note");
+        alert(name+"\n"+Emailadd+"\n"+ note+"\n");
+        setTimeout(function(){
+            var some=document.getElementsByClassName('paypal-button large');
+            console.log(some[0]);
+           // some[0].click();
+            some[1].click();
+
+        },400);
+
+    </script>
 </head>
 <body>
+
+<div id="bla"> please wait while we send u yo to Paypal or Click the buttom</div>
 <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_top" style="opacity: 1;">
     <div class="hide" id="errorBox"></div><input type="hidden" name="button" value="buynow">
     <input type="hidden" name="business" value="jonathangibar@gmail.com">
