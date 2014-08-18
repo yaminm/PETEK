@@ -2,6 +2,25 @@
 <html>
 <head>
     <title> </title>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+            type="text/javascript"></script>
+    <script language="javascript">
+        $.getJSON( "db.json", function( data ) {
+            var items = [];
+            console.log(data);
+            $.each( data, function( key, val ) {
+                items.push( "<li id='" + key + "'>" + val + "</li>" );
+            });
+
+            $( "<ul/>", {
+                "class": "my-new-list",
+                html: items.join( "" )
+            }).appendTo( "body" );
+        });
+        
+       // window.location.href = "index.html"
+    </script>
 </head>
 <body>
    תודה שקנית אצלנו אתה אחלה בחור!
