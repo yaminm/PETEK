@@ -29,7 +29,7 @@ $Emailadd = "<script>document.write(Emailadd);</script>";
 $note = "<script>document.write(note);</script>";
 
 if($note!="" && $name!="" && $Emailadd!=""){
-	mail("yamin.menash@gmail.com","MONEYYYY PETEK","name:"+$name+"\nmail:"+$Emailadd +"\nTHE Petek:"+$note);
+	mail("petekotel@gmail.com","MONEYYYY PETEK","name:"+$name+"\nmail:"+$Emailadd +"\nTHE Petek:"+$note);
 			echo "
 				<script type=\"text/javascript\">
 				p();
